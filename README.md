@@ -1,54 +1,50 @@
 # Moon Cards
 
-Un juego de memoria clásico con temática de Sailor Moon.
+Moon Cards es un juego de cartas inspirado en *Sailor Moon*.  
+Puedes explorar cartas, filtrarlas, agregar tus favoritas y jugar el clásico juego de memoria. 
 
 ---
 
 ## Descripción
 
-**Moon Cards** es un juego de memoria donde debes encontrar las parejas de cartas.
-Inspirado en el universo de *Sailor Moon*, con un diseño sencillo y kawaii.
-
----
-
-## Características
-
-- Interfaz simple.
-- Sistema de cartas boca arriba / boca abajo.
-- Contador de intentos.
-- Totalmente jugable en navegador.
-- Diseño responsivo.
+- Juego de memoria con 12 cartas y sistema de parejas.  
+- Registro e inicio de sesión de usuario, simulado con `localStorage`.  
+- Filtro de cartas por personajes de *Sailor Moon*.  
+- Guardado de cartas favoritas.  
+- Diseño simple y responsivo.
 
 ---
 
 ## Cómo jugar
 
-1. Haz clic en una carta para voltearla.
-2. Voltea una segunda carta.
-3. Si las dos cartas coinciden, se quedan boca arriba.
-4. Si no coinciden, se vuelven a ocultar.
-5. Encuentra todas las parejas para ganar.
+1. Regístrate o inicia sesión.  
+2. Explora las cartas y usa el filtro para encontrar tus favoritas.  
+3. Agrega cartas a favoritos si quieres coleccionarlas.  
+4. En el juego de memoria:  
+   - Haz clic en una carta para voltearla.  
+   - Voltea una segunda carta.  
+   - Si coinciden, se quedan boca arriba, si no, se ocultan.  
+   - Encuentra todas las parejas para ganar.
 
 ---
 
 ## Tecnologías usadas
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+- HTML5  
+- CSS3  
+- JavaScript Vanilla
+- API externa 
 
 ---
 
-## Cómo ejecutar el juego
+## Cómo ejecutar el proyecto
 
-1. Descarga o clona el repositorio.
-2. Abre la carpeta del proyecto.
-3. Haz doble clic en el archivo `index.html` o desde VScode se puede abrir con live server.
-
-El juego se abrirá en tu navegador.
+1. Clona o descarga el repositorio.  
+2. Abre la carpeta del proyecto.  
+3. Abre `index.html` en tu navegador o usa Live Server en VSCode.
 
 ---
 
 ## Estructura del proyecto
 
-1. En curso...
+En curso...
