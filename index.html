@@ -6,6 +6,20 @@
     <title>Moon-Cards</title>
 </head>
 <body>
-    
+    <script type="module">
+        import UserService from "./js/services/UserService.js";
+        import CardService from "./js/services/CardService.js"
+        import User from "./js/models/User.js";
+        import Card from "./js/models/Card.js";
+
+        initUsers();
+
+        function initUsers(){
+            let saray = new User("Saray","saray@gmail.com","123456");
+            UserService.saveUser(saray);
+            
+            
+        }
+    </script>
 </body>
 </html>

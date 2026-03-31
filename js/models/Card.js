@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(id, name, urlImage, isHidden = true) {
 
     if (!id) {

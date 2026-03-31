@@ -1,4 +1,4 @@
-class User {
+export default class User {
   constructor(name, email, password) {
   
     if (!name || name.trim() === "") {

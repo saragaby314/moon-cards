@@ -1,22 +1,39 @@
-class UserService {
+import User from "../models/User.js"
+
+export default class UserService {
   
-  static login(email, password) {
-    const user = User.load();
 
-    if (!user) {
-      throw new Error("No hay usuario registrado");
+  static saveUser(user){
+    try{
+      localStorage.setItem(user.name , JSON.stringify(user));
+    }catch(ex){
+      console.log("Error al guardar el usuario");
     }
-
-    if (user.email !== email) {
-      throw new Error("El email no es correcto");
+    
+  }
+  static loadUser(userName){
+    let usuario;
+    try{
+      usuario = localStorage.getItem(userName);
+      usuario = JSON.parse(usuario);
+      usuario = new User(usuario.name, usuario.email, usuario.password);
+    }catch(ex){
+      usuario = null;
+      console.log("Error al recuperar el usuario");
     }
+    return usuario;
+  }
 
+  static login(userName, password) {
+    let user = this.loadUser(userName);
+
+    if(user==null){
+      return null;
+    }
     if (user.password !== password) {
       throw new Error("La contraseña es incorrecta");
     }
-
     localStorage.setItem("currentUser", JSON.stringify(user));
-
     return user;
   }
 
@@ -25,16 +42,15 @@ class UserService {
   }
 
   static getActualLogin() {
-    const data = localStorage.getItem("currentUser");
-
-    if (!data) return null;
-
-    try {
-      const obj = JSON.parse(data);
-      return new User(obj.name, obj.email, obj.password);
-    } catch (error) {
-      console.error("Error al obtener usuario logueado:", error);
-      return null;
+    let user = null;
+    let data = localStorage.getItem("currentUser");
+    data =  JSON.parse(data);
+    if(data!=null){
+      user = new User(data.name, data.email, data.password);
     }
+    return user;
   }
+
+
+
 }

@@ -1,6 +1,6 @@
-import Card from "..Card.js";
+import Card from "../models/Card.js";
 
-class CardService {
+export default class CardService {
 
   static getCardFromRawData(rawData, id) {
     if (!rawData) {
@@ -25,5 +25,3 @@ class CardService {
     return card;
   }
 }
-
-export default CardService;
