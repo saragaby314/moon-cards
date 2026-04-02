@@ -1,0 +1,11 @@
+form{
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+}
+form input{
+    max-width: 20em;
+}
+form button{
+    max-width: 10em;
+}

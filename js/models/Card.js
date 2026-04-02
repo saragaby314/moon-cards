@@ -1,5 +1,5 @@
 export default class Card {
-  constructor(id, name, urlImage, isHidden = true) {
+  constructor(id, name, imageUrl, isHidden = true) {
 
     if (!id) {
       throw new Error("El ID de la carta no puede estar vacío");
@@ -9,7 +9,7 @@ export default class Card {
       throw new Error("El nombre de la carta no puede estar vacío");
     }
 
-    if (!urlImage || typeof urlImage !== "string") {
+    if (!imageUrl|| typeof imageUrl !== "string") {
       throw new Error("La carta debe tener una URL de imagen válida");
     }
 
@@ -19,7 +19,7 @@ export default class Card {
 
     this.id = id;
     this.name = name.trim();
-    this.urlImage = urlImage;
+    this.imageUrl = imageUrl;
     this.isHidden = isHidden; 
   }
 
@@ -31,21 +31,4 @@ export default class Card {
     this.isHidden = true;
   }
 
-  save() {
-    const data = JSON.stringify(this);
-    localStorage.setItem(`card-${this.id}`, data);
-  }
-
-  static load(id) {
-    const data = localStorage.getItem(`card-${id}`);
-    if (!data) return null;
-
-    try {
-      const obj = JSON.parse(data);
-      return new Card(obj.id, obj.name, obj.urlImage, obj.isHidden);
-    } catch (error) {
-      console.error("Error al cargar la carta desde localStorage:", error);
-      return null;
-    }
-  }
 }

@@ -4,22 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon-Cards</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+
+    <header>
+        <div class="hidden" id="usuarioPanel"> 
+            <btn  id="btnLogout">Logout</btn>
+        </div>
+        
+    </header>
+    <div class="hidden" id="loginPanel">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input name="loginName" placeholder="Nombre de usuario" type="text"/>
+            <input name="loginPassword" type="password" placeholder="Password"/>
+            <button id="btnLogin"type="submit">Enviar</button>
+            <button id="btnGoToRegistroUsuario">Registro</button>
+        </form>
+        
+    </div>
+    <div class="hidden" id="registroPanel">
+        <h2>Registro</h2>
+        <form id="registroForm">
+            <input name="registroName" placeholder="Nombre de usuario" type="text"/>
+            <input name="registroEmail" placeholder="Email"/>
+            <input name="registroPassword" type="password" placeholder="Password"/>
+            <button id="btnRegistro"type="submit">Enviar</button>
+            <button id="btnVolverALoginFromPanelregistro">Volver</button>
+        </form>
+    </div>
+    <div class="hidden" id="panelBoard">
+        <h1>Tablero</h1>
+    </div>
+    
+
     <script type="module">
         import UserService from "./js/services/UserService.js";
-        import CardService from "./js/services/CardService.js"
+        import CardService from "./js/services/CardService.js";
+        import ApiService from "./js/services/ApiService.js";
+        
         import User from "./js/models/User.js";
         import Card from "./js/models/Card.js";
+        import Board from "./js/models/Board.js";
 
+        const panelLogin = document.querySelector("#loginPanel");
+        const panelRegistro = document.querySelector("#registroPanel");
+        const panelBoard = document.querySelector("#panelBoard");
+        const panelUsuario = document.querySelector("#usuarioPanel");
+
+        const board = new Board(panelBoard);
+        
+        
         initUsers();
+        initApp();
 
         function initUsers(){
             let saray = new User("Saray","saray@gmail.com","123456");
             UserService.saveUser(saray);
-            
-            
         }
+        function initApp(){
+            ocultarPaneles()
+            let currentUser = UserService.getActualLogin();
+            if(currentUser!=null){
+                mostrarPanel(panelBoard);
+                mostrarPanel(panelUsuario);
+            }else{
+                mostrarPanel(panelLogin);
+            }
+            initPanelLogin();
+            initPanelRegistro();
+            initPanelUsuario();
+            initPanelBoard();
+        }
+
+        async function initPanelBoard(){
+            //////para borrar
+            let data = await ApiService.getCharacters();
+            let cards = CardService.getCardsFromRawData(data);
+            board.cards = cards;
+            console.log(board);
+            board.render();
+
+            //////fin para borrar.
+        }
+
+        function initPanelUsuario(){
+            const btnLogout = document.querySelector("#btnLogout");
+            btnLogout.addEventListener("click",(event)=>{
+                UserService.logout();
+                location.reload();
+            });
+            const usuario = UserService.getActualLogin();
+            const miDiv = document.createElement('span');
+            try{
+                miDiv.innerHTML = `<b>${usuario.name}</b>`;
+            }catch(ex){
+                console.log("Usuario no logeado");
+            }
+            
+            panelUsuario.prepend(miDiv);
+
+        }
+        function initPanelRegistro(){
+            const formRegistro = document.querySelector("#registroForm");
+            const btnVolverALoginFromPanelregistro = document.querySelector("#btnVolverALoginFromPanelregistro");
+            btnVolverALoginFromPanelregistro.addEventListener("click",(event)=>{
+                event.preventDefault();
+                ocultarPaneles();
+                mostrarPanel(panelLogin);
+            });
+            formRegistro.addEventListener("submit",(event)=>{
+                event.preventDefault();
+                const data = new FormData(formRegistro);
+                const registroName = data.get("registroName");
+                const registroEmail = data.get("registroEmail");
+                const registroPassword = data.get("registroPassword");
+                const user = new User(registroName,registroEmail,registroPassword);
+                UserService.saveUser(user);
+                UserService.login(registroName,registroPassword);
+                location.reload();
+                
+            });
+        }
+        
+        function initPanelLogin(){
+            const btnGoToRgistroUsuario = document.querySelector("#btnGoToRegistroUsuario");
+            loginForm.addEventListener("submit",(event)=>{
+                event.preventDefault();
+                const loginForm = document.querySelector("#loginForm");
+                const data = new FormData(loginForm);
+                const name = data.get("loginName");
+                const password = data.get("loginPassword");
+                const user = UserService.login(name,password);
+                if(user!=null){
+                    location.reload();
+                }
+            });
+            btnGoToRegistroUsuario.addEventListener("click",(event)=>{
+                event.preventDefault();
+                ocultarPaneles();
+                mostrarPanel(panelRegistro);
+            });
+        }
+        function mostrarPanel(panel){
+            panel.classList.remove("hidden");
+        }
+        function ocultarPaneles(){
+            panelLogin.classList.add("hidden");
+            panelRegistro.classList.add("hidden");
+            panelBoard.classList.add("hidden");
+            panelUsuario.classList.add("hidden");
+        }
+        /*
+        let data = await ApiService.getCharacters();
+        let cards = CardService.getCardsFromRawData(data);
+
+        const board = new Board(cards);
+        console.log(board.cards.length); 
+        console.log(board.cards);       
+        console.dir(cards);
+
+        const contenedor = document.getElementById("carta-ver");
+
+        for (const card of board.cards){
+            const divCard = CardService.renderCard(card);
+            contenedor.appendChild(divCard);
+        }
+        */
+
+
+
+    
     </script>
 </body>
 </html>

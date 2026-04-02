@@ -17,7 +17,7 @@ Puedes explorar cartas, filtrarlas, agregar tus favoritas y jugar el clásico ju
 
 ## Cómo jugar
 
-1. Regístrate o inicia sesión.  
+1. Regístrate e inicia sesión.  
 2. Explora las cartas y usa el filtro para encontrar tus favoritas.  
 3. Agrega cartas a favoritos si quieres coleccionarlas.  
 4. En el juego de memoria:  
