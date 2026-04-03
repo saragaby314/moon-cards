@@ -1,11 +1,9 @@
 # Moon Cards
 
-**Un juego interactivo de memoria basado en el anime Sailor Moon, desarrollado con HTML5, CSS3 y JavaScript Vanilla con arquitectura orientada a objetos.**
+**Juego interactivo de memoria basado en el anime Sailor Moon, desarrollado con HTML5, CSS3 y JavaScript Vanilla, usando programación orientada a objetos.**
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Status](https://img.shields.io/badge/status-Completo-brightgreen)
-
+![Version](https://img.shields.io/badge/version-0.1.0-yellow?style=flat)
+![Status](https://img.shields.io/badge/status-En%20desarrollo-orange?style=flat)
 ---
 
 ## Descripción del Proyecto
@@ -98,11 +96,11 @@ moon-cards/
 
 | Tecnología | Uso |
 |-----------|-----|
-| **HTML5** | Estructura y marcado semántico |
-| **CSS3** | Estilos y diseño responsivo |
-| **JavaScript ES6** | Lógica de la aplicación |
-| **Jikan API v4** | Datos de personajes de Sailor Moon |
-| **localStorage** | Almacenamiento local de usuarios |
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estructura y marcado semántico |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Estilos y diseño responsivo |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Lógica de la aplicación |
+| ![Jikan API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat) | Datos de personajes de Sailor Moon |
+| ![localStorage](https://img.shields.io/badge/localStorage-333333?style=flat&logo=webstorage&logoColor=white) | Almacenamiento local de usuarios |
 
 ### API Externa
 
@@ -298,6 +296,6 @@ let currentUser = UserService.getActualLogin()
 
 ## Créditos
 
-- **Jikan API** - Datos de personajes de anime
-- **Sailor Moon** - Toei Animation
-- **Inspiración**: Juegos clásicos de memoria
+- ![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat) **Jikan API** – Datos de personajes de anime
+- ![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat) **Sailor Moon** – Toei Animation
+- ![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat) Juegos clásicos de memoria
