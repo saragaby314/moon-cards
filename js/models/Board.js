@@ -89,13 +89,13 @@ export default class Board {
   }
   
   prepareCards(cards) {
-    // 1. Map → array y coge solo 6
+    // Map array y coge solo 6
     const selected = Array.from(cards.values()).slice(0, 6);
 
-    // 2. Duplica para crear parejas
+    // Duplica para crear parejas
     const pairs = [...selected, ...selected];
 
-    // 3. Baraja
+    // Baraja
     return pairs.sort(() => Math.random() - 0.5);
   }
 }
