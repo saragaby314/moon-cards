@@ -441,10 +441,10 @@ function ocultarPaneles() { [...paneles].forEach(p => p.classList.add("hidden"))
 
 ### Posibles mejoras Futuras
 
-- [ ] Contador de intentos
-- [ ] Sonidos en eventos
-- [ ] Animaciones CSS3
-- [ ] Modo oscuro
+- Contador de intentos
+- Sonidos en eventos
+- Animaciones CSS3
+- Modo oscuro
 
 ### Reflexión Final
 
