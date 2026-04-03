@@ -96,11 +96,11 @@ moon-cards/
 
 | Tecnología | Uso |
 |-----------|-----|
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estructura y marcado semántico |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Estilos y diseño responsivo |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Lógica de la aplicación |
-| ![Jikan API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat) | Datos de personajes de Sailor Moon |
-| ![localStorage](https://img.shields.io/badge/localStorage-333333?style=flat&logo=webstorage&logoColor=white) | Almacenamiento local de usuarios |
+| [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML) | Estructura y marcado |
+| [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS) | Estilos y diseño responsivo |
+| [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/es/docs/Web/JavaScript) | Lógica de la aplicación |
+| [![Jikan API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) | Datos de personajes de Sailor Moon |
+| [![localStorage](https://img.shields.io/badge/localStorage-333333?style=flat&logo=webstorage&logoColor=white)](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) | Almacenamiento local de usuarios |
 
 ### API Externa
 
@@ -296,6 +296,6 @@ let currentUser = UserService.getActualLogin()
 
 ## Créditos
 
-- ![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat) **Jikan API** – Datos de personajes de anime
-- ![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat) **Sailor Moon** – Toei Animation
-- ![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat) Juegos clásicos de memoria
+- [![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** – Datos de personajes de anime
+- [![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** – Toei Animation
+- [![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://es.wikipedia.org/wiki/Juego_de_memoria) Juegos clásicos de memoria
