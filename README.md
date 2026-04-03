@@ -298,4 +298,4 @@ let currentUser = UserService.getActualLogin()
 
 - [![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** – Datos de personajes de anime
 - [![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** – Toei Animation
-- [![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://es.wikipedia.org/wiki/Juego_de_memoria) Juegos clásicos de memoria
+- [![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://www.juegosdememoriagratis.com/) Juegos de memoria online
