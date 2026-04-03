@@ -90,7 +90,9 @@ export default class Board {
   
   prepareCards(cards) {
     // Map array y coge solo 6
-    const selected = Array.from(cards.values()).slice(0, 6);
+    let selected = Array.from(cards.values());
+    selected.sort(() => Math.random() - 0.5);
+    selected = selected.slice(0, 6);
 
     // Duplica para crear parejas
     const pairs = [...selected, ...selected];
