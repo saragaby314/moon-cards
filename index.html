@@ -11,6 +11,7 @@
 
     <header>
         <div class="hidden" id="usuarioPanel"> 
+            <span>Only popular:<input id="inputFilter" type="checkbox"/></span>
             <btn  id="btnLogout">Logout</btn>
         </div>
         
@@ -36,7 +37,7 @@
         </form>
     </div>
     <div class="hidden" id="panelBoard">
-        <h1>Tablero</h1>
+        
     </div>
     
 
@@ -80,18 +81,25 @@
         }
 
         async function initPanelBoard(){
-            //////para borrar
+            const inputFilter = document.querySelector("#inputFilter");
+            board.restart();
             let data = await ApiService.getCharacters();
+            if(inputFilter.checked){
+                data = data.filter(d=>d.favorites>=500);
+            }
+            console.dir(data);
             let cards = CardService.getCardsFromRawData(data);
-            board.cards = cards;
+            board.cards = board.prepareCards(cards);
             console.log(board);
             board.render();
-
-            //////fin para borrar.
         }
 
         function initPanelUsuario(){
             const btnLogout = document.querySelector("#btnLogout");
+            const inputFilter = document.querySelector("#inputFilter");
+            inputFilter.addEventListener("change",()=>{
+                initPanelBoard();
+            });
             btnLogout.addEventListener("click",(event)=>{
                 UserService.logout();
                 location.reload();
@@ -157,22 +165,7 @@
             panelBoard.classList.add("hidden");
             panelUsuario.classList.add("hidden");
         }
-        /*
-        let data = await ApiService.getCharacters();
-        let cards = CardService.getCardsFromRawData(data);
 
-        const board = new Board(cards);
-        console.log(board.cards.length); 
-        console.log(board.cards);       
-        console.dir(cards);
-
-        const contenedor = document.getElementById("carta-ver");
-
-        for (const card of board.cards){
-            const divCard = CardService.renderCard(card);
-            contenedor.appendChild(divCard);
-        }
-        */
 
 
 

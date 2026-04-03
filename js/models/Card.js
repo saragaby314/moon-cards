@@ -30,5 +30,29 @@ export default class Card {
   hide() {
     this.isHidden = true;
   }
+  createDomElement(){
+    const newCard = document.createElement('div');
+    newCard.className  = 'card';
+    newCard.dataset.id = this.id;
+    let hidden = "";
+    
+    if(this.isHidden){
+      hidden="hidden";
+    }
+    
+    newCard.innerHTML = `
+      <div data-id="${this.id}" class="card-inner ${hidden}">
+        <div data-id="${this.id}" class="card-front"></div>
+        <div data-id="${this.id}" class="card-back">
+          <img
+            data-id="${this.id}"
+            src="${this.imageUrl}"
+            alt="${this.name}"
+          />
+        </div>
+      </div>
+    `;
+    return newCard;
+  }
 
 }

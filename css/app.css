@@ -1,3 +1,19 @@
 .hidden{
     display:none;
 }
+
+.board{
+    width: 100%;
+    max-width: 400px;
+    gap:0.5em;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-content: space-evenly;
+}
+.card{
+    border:  black 2px solid;
+    background-color: blue;
+    width: 15vw;
+    height: 30vh;
+}

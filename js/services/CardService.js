@@ -16,27 +16,8 @@ export default class CardService {
     }
     return cards;
   }
-  
-// 1 crear un div
-  static renderCard(card){
-    const newCard = document.createElement('div');
-    newCard.className  = 'card';
-    newCard.dataset.id = card.id;
 
-    newCard.innerHTML = `
-      <div class="card-inner">
-        <div class="card-front"></div>
-        <div class="card-back">
-          <img
-            src="${card.imageUrl}"
-            alt="${card.name}"
-          />
-        </div>
-      </div>
-    `;
-    return newCard;
 
-  }
 }
 
 
