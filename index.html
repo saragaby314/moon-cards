@@ -26,8 +26,8 @@
         </div>
         <h2>Login</h2>
         <form id="loginForm">
-            <input name="loginName" placeholder="Nombre de usuario" type="text" />
-            <input name="loginPassword" type="password" placeholder="Password" />
+            <input name="loginName" placeholder="Nombre de usuario" type="text" required />
+            <input name="loginPassword" type="password" placeholder="Password" required />
             <button id="btnLogin" type="submit">Enviar</button>
             <button id="btnGoToRegistroUsuario">Registro</button>
         </form>
@@ -40,17 +40,15 @@
         </div>
         <h2>Registro</h2>
         <form id="registroForm">
-            <input name="registroName" placeholder="Nombre de usuario" type="text" required/>
-            <input name="registroEmail" type="email" placeholder="Email" required/>
-            <input name="registroPassword" type="password" placeholder="Password" required/>
+            <input name="registroName" placeholder="Nombre de usuario" type="text" required />
+            <input name="registroEmail" type="email" placeholder="Email" required />
+            <input name="registroPassword" type="password" placeholder="Password" required />
             <button id="btnRegistro" type="submit">Enviar</button>
             <button id="btnVolverALoginFromPanelregistro">Volver</button>
         </form>
     </div>
     <div class="hidden" id="panelBoard">
-
     </div>
-
 
     <script type="module">
         import UserService from "./js/services/UserService.js";
@@ -68,7 +66,6 @@
 
         const board = new Board(panelBoard);
 
-
         initUsers();
         initApp();
 
@@ -76,6 +73,7 @@
             let saray = new User("Saray", "saray@gmail.com", "123456");
             UserService.saveUser(saray);
         }
+
         function initApp() {
             ocultarPaneles()
             let currentUser = UserService.getActualLogin();
@@ -126,6 +124,7 @@
             panelUsuario.prepend(miDiv);
 
         }
+
         function initPanelRegistro() {
             const formRegistro = document.querySelector("#registroForm");
             const btnVolverALoginFromPanelregistro = document.querySelector("#btnVolverALoginFromPanelregistro");
@@ -143,11 +142,11 @@
                 try {
                     const user = new User(registroName, registroEmail, registroPassword);
                     UserService.saveUser(user);
-                    UserService.login(registroName, registroPassword);  
-                    location.reload(); 
+                    UserService.login(registroName, registroPassword);
+                    location.reload();
                 } catch (error) {
                     alert(error.message);
-                    
+
                 }
 
             });
@@ -172,19 +171,17 @@
                 mostrarPanel(panelRegistro);
             });
         }
+
         function mostrarPanel(panel) {
             panel.classList.remove("hidden");
         }
+
         function ocultarPaneles() {
             panelLogin.classList.add("hidden");
             panelRegistro.classList.add("hidden");
             panelBoard.classList.add("hidden");
             panelUsuario.classList.add("hidden");
         }
-
-
-
-
 
     </script>
 </body>
