@@ -114,7 +114,7 @@ moon-cards/
 
 ---
 
-## Arquitectura y Conceptos POO
+## Arquitectura
 
 ### Diagrama de Clases
 
