@@ -40,9 +40,9 @@
         </div>
         <h2>Registro</h2>
         <form id="registroForm">
-            <input name="registroName" placeholder="Nombre de usuario" type="text" />
-            <input name="registroEmail" placeholder="Email" />
-            <input name="registroPassword" type="password" placeholder="Password" />
+            <input name="registroName" placeholder="Nombre de usuario" type="text" required/>
+            <input name="registroEmail" type="email" placeholder="Email" required/>
+            <input name="registroPassword" type="password" placeholder="Password" required/>
             <button id="btnRegistro" type="submit">Enviar</button>
             <button id="btnVolverALoginFromPanelregistro">Volver</button>
         </form>
@@ -140,10 +140,15 @@
                 const registroName = data.get("registroName");
                 const registroEmail = data.get("registroEmail");
                 const registroPassword = data.get("registroPassword");
-                const user = new User(registroName, registroEmail, registroPassword);
-                UserService.saveUser(user);
-                UserService.login(registroName, registroPassword);
-                location.reload();
+                try {
+                    const user = new User(registroName, registroEmail, registroPassword);
+                    UserService.saveUser(user);
+                    UserService.login(registroName, registroPassword);  
+                    location.reload(); 
+                } catch (error) {
+                    alert(error.message);
+                    
+                }
 
             });
         }

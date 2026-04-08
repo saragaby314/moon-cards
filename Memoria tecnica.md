@@ -522,7 +522,6 @@ function ocultarPaneles() {
 - Efectos de sonido en eventos (volteo, pareja, victoria)
 - Modo oscuro
 - Validación de email con regex
-- Mensaje de error visible en el formulario de login cuando las credenciales son incorrectas
 
 ### Reflexión Final
 

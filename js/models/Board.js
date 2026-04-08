@@ -1,6 +1,3 @@
-import Card from "./Card.js";
-import CardService from "../services/CardService.js";
-
 export default class Board {
   constructor(container) {
     this.container = container;
