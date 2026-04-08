@@ -2,7 +2,6 @@ import User from "../models/User.js"
 
 export default class UserService {
   
-
   static saveUser(user){
     try{
       localStorage.setItem(user.name , JSON.stringify(user));
@@ -11,6 +10,7 @@ export default class UserService {
     }
     
   }
+  
   static loadUser(userName){
     let usuario;
     try{
@@ -50,7 +50,5 @@ export default class UserService {
     }
     return user;
   }
-
-
 
 }
