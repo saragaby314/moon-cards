@@ -247,6 +247,8 @@ let currentUser = UserService.getActualLogin()
 
 ## Créditos
 
-[![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** — Datos de personajes de anime
-[![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** — Toei Animation
-[![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://www.juegosdememoriagratis.com/) Juegos de memoria online
+[![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat&logo=api&logoColor=white)](https://jikan.moe/) **Jikan API** - Proporciona datos de personajes de anime.
+
+[![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat&logo=anime&logoColor=black)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** - Producción de Toei Animation.
+
+[![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_de_Memoria-1E90FF?style=flat&logo=gamepad&logoColor=white)](https://www.juegosdememoriagratis.com/) **Juegos de memoria online** - Inspiración para la mecánica de la app.
