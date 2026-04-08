@@ -1,19 +1,245 @@
-.hidden{
-    display:none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: "Trebuchet MS", Tahoma, Verdana, sans-serif;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6), transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(255,192,203,0.3), transparent 40%),
+    linear-gradient(180deg, #fdf0ff, #ffffff);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: black;
+  min-height: 100vh;
 }
 
-.board{
-    width: 100%;
-    max-width: 400px;
-    gap:0.5em;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
-    justify-content: space-evenly;
+.hidden {
+    display: none;
 }
-.card{
-    border:  black 2px solid;
-    background-color: #f06ab3;
-    width: 15vw;
-    height: 30vh;
+
+.board {
+    width: 100%;
+    max-width: 1000px;
+    gap: 8px;
+    margin: 1em auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    padding: 0 1em;
+}
+
+#panelBoard, #usuarioPanel {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+#panelBoard.hidden, #usuarioPanel.hidden {
+    display: none;
+}
+
+#usuarioPanel {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0.8em 1em;
+    gap: 0.8em;
+    flex-wrap: wrap;
+    max-width: 1000px; 
+    margin: 0.5em auto;   
+    margin-top: -0.7em;  
+    margin-bottom: -0.7em;         
+    font-family: inherit;
+}
+
+#usuarioPanel span {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #7a4f68; 
+    white-space: nowrap;
+}
+
+#usuarioPanel input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#btnLogout {
+    padding: 0.5em 1em;
+    background-color: #EE7AA4;       
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+#btnLogout:hover {
+    background: linear-gradient(135deg, #C73763, #E14074);
+    transform: translateY(-2px);
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #FBD56B; 
+    border-radius: 12px;
+
+    background-image: 
+        url('../assets/favicon.ico'),
+        radial-gradient(circle at top, rgba(251,213,107,0.12), transparent 60%),
+        radial-gradient(circle at bottom, rgba(225,64,116,0.12), transparent 60%);
+    background-size: 55%, 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: center, top, bottom;
+    background-color: #FCE4EC;
+
+    box-shadow:
+        0 0 6px rgba(251, 213, 107, 0.35),
+        0 3px 8px rgba(225, 64, 116, 0.12);
+
+    width: 100%;
+    aspect-ratio: 1 / 1.25;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: radial-gradient(circle at center, rgba(251, 213, 107, 0.2), transparent 70%);
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.25),
+        transparent 75%
+    );
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 0 8px rgba(251, 213, 107, 0.5),
+        0 0 16px rgba(251, 213, 107, 0.25),
+        0 5px 12px rgba(225, 64, 116, 0.18);
+}
+
+.card:hover::after {
+    opacity: 0.7;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TABLET (768px) */
+@media (max-width: 768px) {
+    .board {
+        max-width: 700px;
+        gap: 6px;
+        margin: 0.8em auto;
+        padding: 0 0.8em;
+    }
+
+    #usuarioPanel {
+        max-width: 700px;
+        padding: 0.7em 0.8em;
+    }
+
+    #usuarioPanel span {
+        font-size: 0.85rem;
+    }
+}
+
+/* MÓVIL (480px) */
+@media (max-width: 480px) {
+    body {
+        background: linear-gradient(180deg, #ffe4f2, #ffffff);
+        background-attachment: fixed;
+    }
+
+    .board {
+        max-width: 100%;
+        gap: 4px;
+        margin: 0.6em 0;
+        padding: 0.5em;
+    }
+
+    #usuarioPanel {
+        max-width: 100%;
+        padding: 0.6em 0.5em;
+        margin: 0.5em 0;
+        gap: 0.6em;
+    }
+
+    #usuarioPanel span {
+        font-size: 0.8rem;
+    }
+
+    #btnLogout {
+        padding: 0.45em 0.8em;
+        font-size: 0.85rem;
+    }
+
+    #panelBoard {
+        margin-top: 2em;
+        padding: 0;
+    }
+}
+
+/* MÓVIL PEQUEÑO (360px) */
+@media (max-width: 360px) {
+    .board {
+        max-width: 100%;
+        gap: 3px;
+        margin: 0.5em 0;
+        padding: 0.4em;
+    }
+
+    #usuarioPanel {
+        max-width: 100%;
+        padding: 0.5em 0.4em;
+        margin: 0.4em 0;
+        gap: 0.4em;
+    }
+
+    #usuarioPanel span {
+        font-size: 0.75rem;
+    }
+
+    #usuarioPanel input[type="checkbox"] {
+        transform: scale(1.1);
+    }
+
+    #btnLogout {
+        padding: 0.4em 0.6em;
+        font-size: 0.8rem;
+    }
 }
