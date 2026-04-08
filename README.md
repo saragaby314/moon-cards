@@ -188,9 +188,9 @@ moon-cards/
 └────────────────────────────────────────┘
 ```
 
-### Notas sobre la implementación de Board
+### Implementación de Board
 
-`Board` almacena las cartas en un **Array indexado por hueco** (posición en el tablero), no en un Map. La propiedad `this.cards` es asignada mediante `board.cards = board.prepareCards(cards)`, donde `prepareCards` devuelve un array barajado. Los métodos `showCardFromHueco` y `hideCardFromHueco` acceden a `this.cards[hueco]` directamente por índice.
+`Board` almacena las cartas en un **Array indexado por hueco** (posición en el tablero). La propiedad `this.cards` es asignada mediante `board.cards = board.prepareCards(cards)`, donde `prepareCards` devuelve un array barajado. Los métodos `showCardFromHueco` y `hideCardFromHueco` acceden a `this.cards[hueco]` directamente por índice.
 
 ---
 
