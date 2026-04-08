@@ -2,8 +2,8 @@
 
 **Juego interactivo de memoria basado en el anime Sailor Moon, desarrollado con HTML5, CSS3 y JavaScript Vanilla, usando programación orientada a objetos.**
 
-![Version](https://img.shields.io/badge/version-0.1.0-yellow?style=flat)
-![Status](https://img.shields.io/badge/status-En%20desarrollo-orange?style=flat)
+![Version](https://img.shields.io/badge/version-0.1.0-blue?style=flat)
+![Status](https://img.shields.io/badge/status-completed-brightgreen?style=flat)
 
 ---
 
@@ -72,7 +72,7 @@ Moon Cards es una aplicación web que combina un **juego clásico de memoria** c
 
 ```
 moon-cards/
-├── index.html               # Archivo HTML principal + controlador de la app
+├── index.html               # Archivo HTML principal y controlador de la app
 ├── assets/
 │   ├── favicon.ico
 │   ├── logo.png
@@ -83,14 +83,15 @@ moon-cards/
 │   └── form.css             # Estilos de formularios
 ├── js/
 │   ├── models/
-│   │   ├── Board.js         # Clase Board - gestiona el tablero
-│   │   ├── Card.js          # Clase Card - define una carta
-│   │   └── User.js          # Clase User - gestiona usuarios
+│   │   ├── Board.js         # Clase Board: gestiona el tablero
+│   │   ├── Card.js          # Clase Card: define una carta
+│   │   └── User.js          # Clase User: gestiona usuarios
 │   └── services/
-│       ├── ApiService.js    # Servicio para llamadas API
+│       ├── ApiService.js    # Servicio para llamadas a la API
 │       ├── CardService.js   # Servicio de transformación de cartas
-│       └── UserService.js   # Servicio de autenticación y usuarios
-└── README.md
+│       └── UserService.js   # Servicio de autenticación y gestión de usuarios
+├── Memoria_tecnica.md       # Documentación técnica del proyecto
+└── README.md                # Documentación general del proyecto
 ```
 
 ---
@@ -246,6 +247,6 @@ let currentUser = UserService.getActualLogin()
 
 ## Créditos
 
-- [![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** — Datos de personajes de anime
-- [![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** — Toei Animation
-- [![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://www.juegosdememoriagratis.com/) Juegos de memoria online
+[![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** — Datos de personajes de anime
+[![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** — Toei Animation
+[![Inspiración](https://img.shields.io/badge/Inspiración-Juegos_Memoria-1E90FF?style=flat)](https://www.juegosdememoriagratis.com/) Juegos de memoria online
