@@ -18,7 +18,7 @@ Moon Cards es una aplicación web que combina un **juego clásico de memoria** c
 - **Filtrado dinámico** de personajes por popularidad (≥500 favoritos)
 - **Juego de memoria** con 12 cartas (6 parejas)
 - **Interfaz responsiva** y sencilla
-- **Arquitectura POO** con clases bien definidas y reutilizables
+- **Arquitectura** con clases reutilizables
 
 ---
 

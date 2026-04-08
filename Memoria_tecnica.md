@@ -21,7 +21,7 @@
 
 **Moon Cards** es una aplicación web que integra conceptos fundamentales de desarrollo web moderno: JavaScript orientado a objetos, manipulación del DOM, consumo de APIs externas y gestión del almacenamiento local.
 
-**Objetivo académico**: Demostrar comprensión de POO, asincronía, patrones de diseño y buenas prácticas de desarrollo web.
+**Objetivo académico**: Demostrar comprensión de programación, asincronía, patrones de diseño y buenas prácticas de desarrollo web.
 
 ---
 
