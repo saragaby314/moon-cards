@@ -247,8 +247,8 @@ let currentUser = UserService.getActualLogin()
 
 ## Créditos
 
-[![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** - Datos de personajes de anime
+[![API](https://img.shields.io/badge/Jikan_API-ff69b4?style=flat)](https://jikan.moe/) **Jikan API** — Datos de personajes de anime
 
-[![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** - Toei Animation
+[![Anime](https://img.shields.io/badge/Sailor_Moon-FFD700?style=flat)](https://es.wikipedia.org/wiki/Sailor_Moon) **Sailor Moon** — Toei Animation
 
-[![Inspiración](https://img.shields.io/badge/Inspiración-Sailor_Moon_Fan-FF5C8D?style=flat)](https://myanimelist.net/anime/530/Bishoujo_Senshi_Sailor_Moon) **Inspiración personal** - Mi anime favorito de la infancia. Quería hacer un proyecto técnico con algo que me importara de verdad.
+[![Inspiración](https://img.shields.io/badge/Inspiración-Sailor_Moon_Fan-FF5C8D?style=flat)](https://myanimelist.net/anime/530/Bishoujo_Senshi_Sailor_Moon) **Inspiración personal** — Mi anime favorito de la infancia. Quería hacer un proyecto técnico con algo que me importa muchísimo.
