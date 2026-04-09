@@ -520,7 +520,6 @@ function ocultarPaneles() {
 
 - Contador de intentos por partida
 - Efectos de sonido en eventos (volteo, pareja, victoria)
-- Modo oscuro
 - Validación de email con regex
 
 ### Reflexión Final
