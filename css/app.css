@@ -3,243 +3,258 @@
   padding: 0;
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: "Trebuchet MS", Tahoma, Verdana, sans-serif;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6), transparent 40%),
-    radial-gradient(circle at 80% 20%, rgba(255,192,203,0.3), transparent 40%),
-    linear-gradient(180deg, #fdf0ff, #ffffff);
-  background-repeat: no-repeat;
+    radial-gradient(circle at 15% 10%, rgba(255,215,0,0.8) 1.5px, transparent 3px),
+    radial-gradient(circle at 25% 40%, rgba(255,215,0,0.7) 1.2px, transparent 3px),
+    radial-gradient(circle at 60% 20%, rgba(255,215,0,0.8) 1.5px, transparent 3px),
+    radial-gradient(circle at 75% 35%, rgba(255,215,0,0.7) 1.2px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255,215,0,0.8) 1.5px, transparent 3px),
+    radial-gradient(circle at 85% 75%, rgba(255,215,0,0.7) 1.2px, transparent 3px),
+    radial-gradient(circle at 5% 60%,  rgba(255,215,0,0.6) 1px, transparent 3px),
+    radial-gradient(circle at 90% 10%, rgba(255,215,0,0.6) 1px, transparent 3px),
+    radial-gradient(circle at 50% 15%, rgba(255,215,0,0.7) 1.3px, transparent 3px),
+    radial-gradient(circle at 35% 55%, rgba(255,215,0,0.6) 1px, transparent 3px),
+    radial-gradient(circle at 65% 65%, rgba(255,215,0,0.7) 1.2px, transparent 3px),
+    radial-gradient(circle at 10% 20%, rgba(255,215,0,0.9) 3px, transparent 4px),
+    radial-gradient(circle at 80% 25%, rgba(255,215,0,0.8) 2.5px, transparent 4px),
+    radial-gradient(circle at 30% 75%, rgba(255,215,0,0.9) 3px, transparent 4px),
+    radial-gradient(circle at 70% 80%, rgba(255,215,0,0.8) 2.5px, transparent 4px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 1px, transparent 2px),
+    radial-gradient(circle at 2% 5%,   rgba(255,215,0,0.6) 1px, transparent 3px),
+    radial-gradient(circle at 98% 90%, rgba(255,215,0,0.6) 1px, transparent 3px),
+    linear-gradient(135deg, #0a001a, #27094b, #461f74);
+    
+  background-repeat: repeat;
   background-attachment: fixed;
-  color: black;
+  color: #E0D9F0;
   min-height: 100vh;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .board {
-    width: 100%;
-    max-width: 1000px;
-    gap: 8px;
-    margin: 1em auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-    padding: 0 1em;
+  width: 100%;
+  max-width: 1000px;
+  gap: 8px;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  padding: 0 1em;
 }
 
 #panelBoard, #usuarioPanel {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 
 #panelBoard.hidden, #usuarioPanel.hidden {
-    display: none;
+  display: none;
 }
 
 #usuarioPanel {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0.8em 1em;
-    gap: 0.8em;
-    flex-wrap: wrap;
-    max-width: 1000px; 
-    margin: 0.5em auto;   
-    margin-top: -0.7em;  
-    margin-bottom: -0.7em;         
-    font-family: inherit;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0.8em 1em;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  max-width: 1000px; 
+  margin: 0.5em auto;   
+  margin-top: -0.7em;  
+  margin-bottom: -0.7em;         
+  font-family: inherit;
 }
 
 #usuarioPanel span {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #7a4f68; 
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #FF5C8D; 
+  white-space: nowrap;
 }
 
 #usuarioPanel input[type="checkbox"] {
-    transform: scale(1.2);
-    cursor: pointer;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 #btnLogout {
-    padding: 0.5em 1em;
-    background-color: #EE7AA4;       
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    color: white;
-    transition: all 0.2s ease;
-    flex-shrink: 0;
-    white-space: nowrap;
+  padding: 0.5em 1em;
+  background-color: #FF5C8D;       
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 #btnLogout:hover {
-    background: linear-gradient(135deg, #C73763, #E14074);
-    transform: translateY(-2px);
+  background: linear-gradient(135deg, #FF3377, #FF5C8D);
+  transform: translateY(-2px);
 }
 
 .card {
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #FBD56B; 
-    border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #FBD56B; 
+  border-radius: 12px;
 
-    background-image: 
-        url('../assets/favicon.ico'),
-        radial-gradient(circle at top, rgba(251,213,107,0.12), transparent 60%),
-        radial-gradient(circle at bottom, rgba(225,64,116,0.12), transparent 60%);
-    background-size: 55%, 100%, 100%;
-    background-repeat: no-repeat;
-    background-position: center, top, bottom;
-    background-color: #FCE4EC;
+  background-image: 
+      url('../assets/favicon.ico'),
+      radial-gradient(circle at top, rgba(255,255,255,0.12), transparent 60%);
+  background-size: 55%, 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: center, top, bottom;
+  background-color: #3b1c6a;
 
-    box-shadow:
-        0 0 6px rgba(251, 213, 107, 0.35),
-        0 3px 8px rgba(225, 64, 116, 0.12);
+  box-shadow:
+    0 0 8px rgba(251, 213, 107, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.5);
 
-    width: 100%;
-    aspect-ratio: 1 / 1.25;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%;
+  aspect-ratio: 1 / 1.25;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    background: radial-gradient(circle at center, rgba(251, 213, 107, 0.2), transparent 70%);
-    opacity: 0.4;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(251, 213, 107, 0.2), transparent 70%);
+  opacity: 0.4;
+  z-index: 0;
 }
 
 .card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    background: linear-gradient(
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(
         120deg,
         transparent 35%,
-        rgba(255, 255, 255, 0.25),
+        rgba(255, 255, 255, 0.25), 
         transparent 75%
-    );
-    opacity: 0;
-    transition: 0.3s ease;
+  );
+  opacity: 0;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow:
-        0 0 8px rgba(251, 213, 107, 0.5),
-        0 0 16px rgba(251, 213, 107, 0.25),
-        0 5px 12px rgba(225, 64, 116, 0.18);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+      0 0 8px rgba(251, 213, 107, 0.5),   
+      0 0 16px rgba(255, 255, 255, 0.25),  
+      0 5px 12px rgba(255,255,255,0.1); 
 }
 
 .card:hover::after {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* TABLET (768px) */
+/* RESPONSIVE TABLET */
 @media (max-width: 768px) {
-    .board {
-        max-width: 700px;
-        gap: 6px;
-        margin: 0.8em auto;
-        padding: 0 0.8em;
-    }
+  .board {
+      max-width: 700px;
+      gap: 6px;
+      margin: 0.8em auto;
+      padding: 0 0.8em;
+  }
 
-    #usuarioPanel {
-        max-width: 700px;
-        padding: 0.7em 0.8em;
-    }
+  #usuarioPanel {
+      max-width: 700px;
+      padding: 0.7em 0.8em;
+  }
 
-    #usuarioPanel span {
-        font-size: 0.85rem;
-    }
+  #usuarioPanel span {
+      font-size: 0.85rem;
+  }
 }
 
-/* MÓVIL (480px) */
+/* RESPONSIVE MÓVIL */
 @media (max-width: 480px) {
-    body {
-        background: linear-gradient(180deg, #ffe4f2, #ffffff);
-        background-attachment: fixed;
-    }
+  .board {
+      max-width: 100%;
+      gap: 4px;
+      margin: 0.6em 0;
+      padding: 0.5em;
+  }
 
-    .board {
-        max-width: 100%;
-        gap: 4px;
-        margin: 0.6em 0;
-        padding: 0.5em;
-    }
+  #usuarioPanel {
+      max-width: 100%;
+      padding: 0.6em 0.5em;
+      margin: 0.5em 0;
+      gap: 0.6em;
+  }
 
-    #usuarioPanel {
-        max-width: 100%;
-        padding: 0.6em 0.5em;
-        margin: 0.5em 0;
-        gap: 0.6em;
-    }
+  #usuarioPanel span {
+      font-size: 0.8rem;
+  }
 
-    #usuarioPanel span {
-        font-size: 0.8rem;
-    }
+  #usuarioPanel input[type="checkbox"] {
+      transform: scale(1.1);
+  }
 
-    #btnLogout {
-        padding: 0.45em 0.8em;
-        font-size: 0.85rem;
-    }
+  #btnLogout {
+      padding: 0.45em 0.8em;
+      font-size: 0.85rem;
+  }
 
-    #panelBoard {
-        margin-top: 2em;
-        padding: 0;
-    }
+  #panelBoard {
+      margin-top: 2em;
+      padding: 0;
+  }
 }
 
-/* MÓVIL PEQUEÑO (360px) */
+/* RESPONSIVE MÓVIL PEQUEÑO */
 @media (max-width: 360px) {
-    .board {
-        max-width: 100%;
-        gap: 3px;
-        margin: 0.5em 0;
-        padding: 0.4em;
-    }
+  .board {
+      max-width: 100%;
+      gap: 3px;
+      margin: 0.5em 0;
+      padding: 0.4em;
+  }
 
-    #usuarioPanel {
-        max-width: 100%;
-        padding: 0.5em 0.4em;
-        margin: 0.4em 0;
-        gap: 0.4em;
-    }
+  #usuarioPanel {
+      max-width: 100%;
+      padding: 0.5em 0.4em;
+      margin: 0.4em 0;
+      gap: 0.4em;
+  }
 
-    #usuarioPanel span {
-        font-size: 0.75rem;
-    }
+  #usuarioPanel span {
+      font-size: 0.75rem;
+  }
 
-    #usuarioPanel input[type="checkbox"] {
-        transform: scale(1.1);
-    }
+  #usuarioPanel input[type="checkbox"] {
+      transform: scale(1.1);
+  }
 
-    #btnLogout {
-        padding: 0.4em 0.6em;
-        font-size: 0.8rem;
-    }
+  #btnLogout {
+      padding: 0.4em 0.6em;
+      font-size: 0.8rem;
+  }
 }
